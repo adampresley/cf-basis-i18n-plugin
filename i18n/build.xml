@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="basis-i18n-bundle-builder" default="usage" basedir=".">
+	<property name="propertyFiles.path" value="" />
+	<property name="deploy.path" value="" />
+	<property name="deploy.filename" value="language-bundle" />
+
+	<target name="usage" description="Usage instructions">
+		<echo message="---------------------------------------------" />
+		<echo message="Instructions for Usage" />
+		<echo message="---------------------------------------------" />
+		<echo message="Targets:"/>
+		<echo message="   - build: Builds a language bundle JAR file" />
+		
+		<echo message="" />
+
+		<echo message="Be sure to set the following variables in this build script" />
+		<echo message="for each project you use it in:" />
+
+		<echo message="" />
+
+		<echo message="   - propertyFiles.path - The path to your language properties files" />
+		<echo message="   - deploy.path - The path to place the resulting JAR file" />
+		<echo message="   - deploy.filename - The name of the JAR file to contain language files (no extension)" />
+	</target>
+
+	<target name="build" description="Builds and deploys the language JAR bundle">
+		<echo message="---------------------------------------------" />
+		<echo message="Build and Deploy" />
+		<echo message="---------------------------------------------" />
+
+		<echo message="" />
+
+		<echo message="Deploying..." />
+		<zip destfile="${deploy.path}/${deploy.filename}.jar" basedir="${propertyFiles.path}" includes="*.properties" />
+	</target>
+
+</project>
