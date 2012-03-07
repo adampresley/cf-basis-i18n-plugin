@@ -3,9 +3,23 @@
 A basic internationalization and globalization plugin for the CF-Basis
 framework.
 
+## Usage
+Copy the **i18n** directory and its contents into your Basis plugins folder.
+The folder for plugins is named **plugins** by default unless you have customized
+it in your application.
+
+Once copied reload your application and Basis will pick it up automatically and
+register it as a new session variable object called *i18n*.
+
+Example:
+```
+<!--- Load the "main" properties file for US English --->
+<cfset session.i18n.setLocale("en", "US").loadResourceBundles([ "main" ]) />
+<!--- Display the value from the key main.title --->
+<cfoutput>#session.i18n.get("main.title")#</cfoutput>
+```
 
 ## License
-
 Copyright 2012 Adam Presley. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
