@@ -12,12 +12,12 @@ Once copied reload your application and Basis will pick it up automatically and
 register it as a new session variable object called *i18n*.
 
 Example:
-```
-<!--- Load the "main" properties file for US English --->
-<cfset session.i18n.setLocale("en", "US").loadResourceBundles([ "main" ]) />
-<!--- Display the value from the key main.title --->
-<cfoutput>#session.i18n.get("main.title")#</cfoutput>
-```
+
+    > <!--- Load the "main" properties file for US English --->
+    > <cfset session.i18n.setLocale("en", "US").loadResourceBundles([ "main" ]) />
+    > <!--- Display the value from the key main.title --->
+    > <cfoutput>#session.i18n.get("main.title")#</cfoutput>
+
 
 ## License
 Copyright 2012 Adam Presley. All rights reserved.
