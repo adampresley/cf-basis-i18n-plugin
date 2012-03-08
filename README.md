@@ -11,6 +11,8 @@ it in your application.
 Once copied reload your application and Basis will pick it up automatically and
 register it as a new session variable object called *i18n*.
 
+Basis is a ColdFusion MVC framework, which can be found at https://github.com/adampresley/cf-basis.
+
 Example:
 
     <!--- Load the "main" properties file for US English --->
